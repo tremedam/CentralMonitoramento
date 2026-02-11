@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Server, Link2, Headphones, BarChart3, Database, Shield, Globe, Settings } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Server, Link2, Headphones, BarChart3, Database, Shield, Globe, Settings, AlertTriangle, CheckCircle, XCircle, Activity, Clock, TrendingUp, Wifi } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MonitoringCard from './components/MonitoringCard';
@@ -144,39 +144,6 @@ function App() {
                         </p>
                     </div>
                 )}
-
-                {/* Stats Section */}
-                <div className="mt-16 bg-white rounded-xl shadow-lg p-8">
-                    <h2 className="text-2xl font-bold text-gray-800 mb-6 text-center">
-                        Visão Geral
-                    </h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-primary-600 mb-2">
-                                {monitoringSystems.length}
-                            </div>
-                            <div className="text-gray-600 text-sm">Sistemas Ativos</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-green-600 mb-2">
-                                24/7
-                            </div>
-                            <div className="text-gray-600 text-sm">Disponibilidade</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-purple-600 mb-2">
-                                100%
-                            </div>
-                            <div className="text-gray-600 text-sm">Cobertura</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-orange-600 mb-2">
-                                Real-time
-                            </div>
-                            <div className="text-gray-600 text-sm">Monitoramento</div>
-                        </div>
-                    </div>
-                </div>
             </main>
 
             <Footer />
