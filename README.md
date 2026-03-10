@@ -84,4 +84,5 @@ Adicione ou remova sistemas editando o array `monitoringSystems` em `src/App.jsx
 
 ## 📝 Licença
 
-Desenvolvido pela equipe de TI.
+Licença MIT
+Desenvolvido para equipes de TI.
