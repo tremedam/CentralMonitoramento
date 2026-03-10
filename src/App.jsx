@@ -1,85 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Server, Link2, Headphones, BarChart3, Database, Shield, Globe, Settings, AlertTriangle, CheckCircle, XCircle, Activity, Clock, TrendingUp, Wifi } from 'lucide-react';
+import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MonitoringCard from './components/MonitoringCard';
+import { monitoringSystems } from './data/monitoringSystems';
 
 function App() {
-    // Dados dos sistemas de monitoramento
-    const monitoringSystems = [
-        {
-            id: 1,
-            title: 'Zabbix',
-            description: 'Monitoramento completo de servidores, infraestrutura e performance em tempo real.',
-            url: 'https://seu-zabbix.com.br', // Substitua pela URL real
-            icon: Server,
-            color: 'from-red-500 to-red-600',
-            category: 'Servidores'
-        },
-        {
-            id: 2,
-            title: 'Visidata',
-            description: 'Monitoramento e gerenciamento de links de rede e conectividade.',
-            url: 'https://seu-visidata.com.br', // Substitua pela URL real
-            icon: Link2,
-            color: 'from-blue-500 to-blue-600',
-            category: 'Links'
-        },
-        {
-            id: 3,
-            title: 'CEC',
-            description: 'Sistema de gerenciamento e acompanhamento de chamados.',
-            url: 'https://seu-cec.com.br', // Substitua pela URL real
-            icon: Headphones,
-            color: 'from-green-500 to-green-600',
-            category: 'Chamados'
-        },
-        {
-            id: 4,
-            title: 'Qlik',
-            description: 'Análise e monitoramento de notas fiscais, tesouraria e indicadores técnicos.',
-            url: 'https://seu-qlik.com.br', // Substitua pela URL real
-            icon: BarChart3,
-            color: 'from-purple-500 to-purple-600',
-            category: 'Analytics'
-        },
-        {
-            id: 5,
-            title: 'Database Monitor',
-            description: 'Monitoramento de bancos de dados, queries e performance.',
-            url: 'https://seu-db-monitor.com.br', // Substitua pela URL real
-            icon: Database,
-            color: 'from-orange-500 to-orange-600',
-            category: 'Banco de Dados'
-        },
-        {
-            id: 6,
-            title: 'Security Center',
-            description: 'Central de segurança, logs e alertas de segurança da informação.',
-            url: 'https://seu-security.com.br', // Substitua pela URL real
-            icon: Shield,
-            color: 'from-indigo-500 to-indigo-600',
-            category: 'Segurança'
-        },
-        {
-            id: 7,
-            title: 'Network Monitor',
-            description: 'Monitoramento de tráfego de rede, bandwidth e conectividade.',
-            url: 'https://seu-network.com.br', // Substitua pela URL real
-            icon: Globe,
-            color: 'from-cyan-500 to-cyan-600',
-            category: 'Rede'
-        },
-        {
-            id: 8,
-            title: 'Config Manager',
-            description: 'Gerenciamento de configurações e inventário de ativos de TI.',
-            url: 'https://seu-config.com.br', // Substitua pela URL real
-            icon: Settings,
-            color: 'from-pink-500 to-pink-600',
-            category: 'Configuração'
-        }
-    ];
 
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('Todos');
