@@ -11,7 +11,7 @@ const Footer = () => {
                         © {currentYear} Central de Monitoramento TI. Todos os direitos reservados.
                     </p>
                     <p className="text-xs mt-2 text-gray-400">
-                        Desenvolvido pela equipe de TI
+                        Desenvolvido para equipes de TI
                     </p>
                 </div>
             </div>
