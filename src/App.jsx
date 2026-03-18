@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MonitoringCard from './components/MonitoringCard';
+import DashboardKPIs from './components/DashboardKPIs';
 import { monitoringSystems } from './data/monitoringSystems';
 
 function App() {
@@ -24,6 +25,9 @@ function App() {
             <Header />
 
             <main className="flex-grow container mx-auto px-6 py-12">
+                {/* Dashboard com KPIs e Alertas */}
+                <DashboardKPIs />
+
                 {/* Search and Filter Section */}
                 <div className="mb-12 space-y-6">
                     {/* Search Bar */}
